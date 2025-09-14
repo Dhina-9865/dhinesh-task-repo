@@ -68,7 +68,7 @@ resource "aws_lb_target_group" "tg" {
   }
 }
 
-# Attach EC2 instances to Target Group
+
 resource "aws_lb_target_group_attachment" "web1" {
   target_group_arn = aws_lb_target_group.tg.arn
   target_id        = aws_instance.web1.id
@@ -80,7 +80,7 @@ resource "aws_lb_target_group_attachment" "web2" {
   port             = 80
 }
 
-# Listener
+
 resource "aws_lb_listener" "http" {
   load_balancer_arn = aws_lb.app_lb.arn
   port              = "80"
