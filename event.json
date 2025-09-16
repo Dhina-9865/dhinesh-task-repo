@@ -1,0 +1,10 @@
+{
+  "source": ["aws.ec2", "aws.s3", "aws.rds", "aws.lambda", "aws.ecr", "aws.logs", "aws.eks"],
+  "detail-type": ["AWS API Call via CloudTrail"],
+  "detail": {
+    "eventSource": ["ec2.amazonaws.com", "s3.amazonaws.com", "rds.amazonaws.com", "lambda.amazonaws.com", "ecr.amazonaws.com", "logs.amazonaws.com", "eks.amazonaws.com"],
+    "eventName": [{
+      "prefix": "Create"
+    }, "RunInstances"]
+  }
+}
